@@ -1,0 +1,56 @@
+{
+  "name": "@express.ts/starter",
+  "version": "0.1.1",
+  "description": "Server-side app are built using the Express.ts web framework and executed in the Node.js runtime environment. ",
+  "main": "dist/server.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "npm install && node dist/server.js",
+    "start:dev": "concurrently -k -p \"[{name}]\" -n \"TsLint,TypeScript,Node\" -c \"yellow.bold,cyan.bold,green.bold\" \"npx gulp watch\" \"tsc -w\" \"npm run start:debug\"",
+    "start:debug": "npm run build && NODE_DEV=true nodemon --inspect dist/server.js",
+    "test": "NODE_TEST=true jest --forceExit --coverage --verbose",
+    "test:dev": "npm run test -- --watchAll",
+    "lint": "tslint -c tslint.json -p tsconfig.json",
+    "lint:fix": "tslint -c tslint.json -p tsconfig.json --fix",
+    "copy-static-assets": "ts-node copyStaticAssets.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/express-ts/starter.git"
+  },
+  "keywords": [
+    "typescript",
+    "nodejs"
+  ],
+  "author": "aboulmane",
+  "license": "ISC",
+  "dependencies": {
+    "@express.ts/router": "^1.0.2",
+    "@express.ts/stereotype": "^1.0.2",
+    "console.table": "^0.10.0",
+    "dotenv": "^8.0.0",
+    "errorhandler": "^1.5.1",
+    "nodemailer": "^6.2.1",
+    "winston": "^2.4.0"
+  },
+  "devDependencies": {
+    "@types/dotenv": "^6.1.1",
+    "@types/errorhandler": "^0.0.32",
+    "@types/express": "^4.17.0",
+    "@types/jest": "^24.0.15",
+    "@types/node": "^12.0.10",
+    "@types/nodemailer": "^6.2.0",
+    "@types/supertest": "^2.0.7",
+    "@types/winston": "^2.3.7",
+    "concurrently": "^4.1.0",
+    "gulp": "^4.0.2",
+    "gulp-tslint": "^8.1.4",
+    "jest": "^24.8.0",
+    "nodemon": "^1.19.1",
+    "supertest": "^4.0.2",
+    "ts-jest": "^24.0.2",
+    "ts-node": "^8.3.0",
+    "tslint": "^5.18.0",
+    "typescript": "^3.4.2"
+  }
+}

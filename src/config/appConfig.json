@@ -1,0 +1,12 @@
+{
+  "app": {
+    "name": "Express.ts Starter"
+  },
+  "nodemailer": {
+    "service": "SendGrid",
+    "auth": {
+      "user": "aboulmane",
+      "pass": "jhjhgmljmljpkjkjgn;,"
+    }
+  }
+}
