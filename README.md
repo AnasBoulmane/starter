@@ -16,6 +16,7 @@ npm run build
 ```
 ### Status
 - ~@express.ts/starter: A simple setup for @express.ts~
+- create detailed documentation
 - @express.ts/cli: A command line interface for @express.ts
 
 ### How does it work
