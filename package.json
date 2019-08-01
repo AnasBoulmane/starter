@@ -23,7 +23,7 @@
     "nodejs"
   ],
   "author": "aboulmane",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "@express.ts/router": "^1.0.2",
     "@express.ts/stereotype": "^1.0.2",
